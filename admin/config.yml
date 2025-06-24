@@ -2,14 +2,23 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "static/img/uploads"
-public_folder: "/img/uploads"
+media_folder: "static/uploads"
+public_folder: "/static/uploads"
 
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "blog"
+  - name: "products"
+    label: "Products"
+    folder: "content/products"
     create: true
+    slug: "{{slug}}"
     fields:
-      - {name: "title", label: "Title", widget: "string"}
-      - {name: "body", label: "Body", widget: "markdown"}
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+      - {
+          label: "Category",
+          name: "category",
+          widget: "select",
+          options: ["Saree", "Dress", "Gown", "Lehenga"]
+        }
+      - { label: "Description", name: "description", widget: "markdown" }
+      - { label: "Price", name: "price", widget: "number", min: 0 }

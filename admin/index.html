@@ -1,24 +1,11 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <!-- Your other head elements -->
-  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
-</head>
-<body>
-  <!-- Your page content -->
-  <div id="nc-root"></div>
-  
-  <!-- Initialize CMS -->
-  <script>
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
-          });
-        }
-      });
-    }
-  </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Admin</title>
+    <script src="https://unpkg.com/netlify-cms@^2.10.0/dist/netlify-cms.js"></script>
+  </head>
+  <body>
+    <div id="nc-root"></div>
+  </body>
 </html>
