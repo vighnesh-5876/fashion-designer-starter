@@ -1,9 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head><title>Home</title><link rel='stylesheet' href='Assets/CSS/style.css'></head>
+<head>
+  <meta charset="utf-8" />
+  <title>Fashion Designer</title>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+      window.netlifyIdentity.init();
+    }
+  </script>
+</head>
 <body>
-<h1>Fashion Designer Portfolio</h1>
-<button onclick="window.netlifyIdentity && window.netlifyIdentity.open()">Login</button>
-
+  <h1>Welcome to Fashion Designer Portfolio</h1>
+  <p><a href="/admin/">Go to Admin</a></p>
 </body>
 </html>

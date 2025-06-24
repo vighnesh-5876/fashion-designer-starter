@@ -1,9 +1,7 @@
-[[redirects]]
-  from = "/admin"
-  to = "/admin/"
-  status = 301
+[build]
+  publish = "."
 
 [[redirects]]
-  from = "/admin/*"
-  to = "/admin/index.html"
+  from = "/*"
+  to = "/index.html"
   status = 200
